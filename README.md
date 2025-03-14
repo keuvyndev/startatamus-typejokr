@@ -9,7 +9,7 @@ Siga os passos abaixo para configurar e iniciar o servidor de desenvolvimento:
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/type-joke.git
+   git clone https://github.com/keuvyndev/startatamus-typejokr.git
    cd type-joke
    ```
 
@@ -49,7 +49,7 @@ npm test
 
 ## 🌐 Deploy
 
-A aplicação foi publicada na Plataforma Vercel. [Clique aqui para visualizar](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme), criada pelos desenvolvedores do Next.js.
+A aplicação foi publicada na Plataforma Vercel. [Clique aqui para visualizar](https://startatamus-typejokr.vercel.app/).
 
 ## 📚 Mais informações
 
@@ -57,19 +57,18 @@ Nesta aplicação foram usadas:
 
 - Possui estilização única projetada com base em interface criada no figma;
   - [Projeto Figma](https://www.figma.com/design/lgG1zrEbnf2IUNIGmCHqNC/STARTAMUS---TYPE-JOKE?node-id=44-654&m=dev&t=W9Rc7K0E5eF2FmJX-1)
-  - [Protótipo Mobile]([Projeto Figma](https://www.figma.com/proto/lgG1zrEbnf2IUNIGmCHqNC/STARTAMUS---TYPE-JOKE?node-id=1-2&t=W9Rc7K0E5eF2FmJX-1)
-  - [Protótipo Desktop]([Projeto Figma](https://www.figma.com/proto/lgG1zrEbnf2IUNIGmCHqNC/STARTAMUS---TYPE-JOKE?node-id=44-377&t=W9Rc7K0E5eF2FmJX-1)
+  - [Protótipo Mobile][Projeto Figma](https://www.figma.com/proto/lgG1zrEbnf2IUNIGmCHqNC/STARTAMUS---TYPE-JOKE?node-id=1-2&t=W9Rc7K0E5eF2FmJX-1)
+  - [Protótipo Desktop][Projeto Figma](https://www.figma.com/proto/lgG1zrEbnf2IUNIGmCHqNC/STARTAMUS---TYPE-JOKE?node-id=44-377&t=W9Rc7K0E5eF2FmJX-1)
 - Multiplos componentes do shadcn tais como:
   - Toaster;
   - Dropdown Menu;
   - Input;
   - Data Table;
   - Button;
-  - etc ...
+  - Entre outros;
 - ContextAPI para controle de estado;
 - Fetch para buscas de piadas via API;
 - Permite algumas funcionalidades tais como:
-
   - Efetuar a busca de uma piada aleatoria;
   - Buscar uma pidada;
   - Copiar ID da piada;
@@ -77,8 +76,6 @@ Nesta aplicação foram usadas:
   - Acessar a URL da piada;
   - Ver informações gerais;
 
-Você também pode conferir o [repositório do Next.js no GitHub](https://github.com/vercel/next.js) - seu feedback e contribuições são bem-vindos!
-
 ---
 
-Feito com ❤️ por Keuvyn Teixeira (https://github.com/seu-usuario)
+Feito com 💙 por Keuvyn Teixeira (https://github.com/keuvyndev)
