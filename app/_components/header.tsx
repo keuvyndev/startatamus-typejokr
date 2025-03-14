@@ -9,7 +9,7 @@ const Header = () => {
         <div className="relative flex h-[180px] w-full flex-col">
           <Image
             src="/type-jokr-log.png"
-            alt="Type Jokr Logo"
+            alt="Logo Type Jokr"
             fill
             sizes="100%"
             className="object-contain"
@@ -64,7 +64,7 @@ const Header = () => {
           <div className="relative mr-14 h-[180px] w-[280px]">
             <Image
               src="/type-jokr-log.png"
-              alt="Type Jokr Logo"
+              alt="Logo Type Jokr"
               fill
               sizes="100%"
               className="object-cover"
