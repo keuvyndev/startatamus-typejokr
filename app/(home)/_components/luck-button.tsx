@@ -12,10 +12,32 @@ const LuckButton = () => {
     await getRandomJoke();
   };
   return (
-    <Button onClick={handleClick} className="w-full" variant={"default"}>
-      <Image width={22} height={22} src={"/smile.png"} alt="More Info"></Image>
-      {"I'm feeling with luck"}
-    </Button>
+    <>
+      {/* Layout para Mobile */}
+      <div className="block lg:hidden">
+        <Button onClick={handleClick} className="w-full" variant={"default"}>
+          <Image
+            width={22}
+            height={22}
+            src={"/smile.png"}
+            alt="More Info"
+          ></Image>
+          {"I'm feeling with luck"}
+        </Button>
+      </div>
+      {/* Layout para Desktop */}
+      <div className="hidden lg:block">
+        <Button onClick={handleClick} variant={"default"}>
+          <Image
+            width={22}
+            height={22}
+            src={"/smile.png"}
+            alt="More Info"
+          ></Image>
+          {"I'm feeling with luck"}
+        </Button>
+      </div>
+    </>
   );
 };
 

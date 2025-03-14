@@ -23,21 +23,40 @@ const SearchJokeInput = () => {
 
   return (
     <>
-      <form
-        onSubmit={handleSubmit}
-        className="flex w-full items-center justify-between"
-      >
-        <Input
-          type="joke"
-          placeholder="Search for joke..."
-          className="hover:border-primary w-[90%]"
-          onChange={handleInputChange}
-          value={params}
-        />
-        <Button type="submit" className="bg-primary">
-          <SearchIcon />
-        </Button>
-      </form>
+      {/* Layout para Mobile */}
+      <div className="block lg:hidden">
+        <form
+          onSubmit={handleSubmit}
+          className="flex w-full items-center justify-between"
+        >
+          <Input
+            type="joke"
+            placeholder="Search for joke..."
+            className="hover:border-primary w-[90%]"
+            onChange={handleInputChange}
+            value={params}
+          />
+          <Button type="submit" className="bg-primary">
+            <SearchIcon />
+          </Button>
+        </form>
+      </div>
+
+      {/* Layout para Desktop */}
+      <div className="hidden lg:block">
+        <form onSubmit={handleSubmit} className="flex items-center gap-2">
+          <Input
+            type="joke"
+            placeholder="Search for joke..."
+            className="hover:border-primary w-2xs shadow-md"
+            onChange={handleInputChange}
+            value={params}
+          />
+          <Button type="submit" className="bg-primary">
+            <SearchIcon />
+          </Button>
+        </form>
+      </div>
     </>
   );
 };

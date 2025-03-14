@@ -8,15 +8,32 @@ import SearchResponseContent from "./_components/search-response";
 export default function Home() {
   return (
     <>
-      <Header />
-      <RoundedBox>
-        <RoundedBoxContent className="space-y-3 px-5">
-          <SearchJokeInput />
-          <LuckButton />
-          <Separator className="mt-3" />
-          <SearchResponseContent />
-        </RoundedBoxContent>
-      </RoundedBox>
+      {/* Layout para Mobile */}
+      <div className="block lg:hidden">
+        <Header />
+        <RoundedBox>
+          <RoundedBoxContent className="space-y-3 px-5">
+            <SearchJokeInput />
+            <LuckButton />
+            <Separator className="mt-3" />
+            <SearchResponseContent />
+          </RoundedBoxContent>
+        </RoundedBox>
+      </div>
+      {/* Layout para Desktop */}
+      <div className="hidden lg:block">
+        <Header />
+        <RoundedBox>
+          <RoundedBoxContent className="space-y-3 px-5">
+            <div className="flex gap-2">
+              <SearchJokeInput />
+              <LuckButton />
+            </div>
+            <Separator className="mt-3" />
+            <SearchResponseContent />
+          </RoundedBoxContent>
+        </RoundedBox>
+      </div>
     </>
   );
 }
