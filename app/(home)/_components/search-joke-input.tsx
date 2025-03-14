@@ -33,10 +33,15 @@ const SearchJokeInput = () => {
             type="joke"
             placeholder="Search for joke..."
             className="hover:border-primary w-[90%]"
+            data-testid="search-joke-input"
             onChange={handleInputChange}
             value={params}
           />
-          <Button type="submit" className="bg-primary">
+          <Button
+            type="submit"
+            className="bg-primary"
+            data-testid="search-joke-button"
+          >
             <SearchIcon />
           </Button>
         </form>
