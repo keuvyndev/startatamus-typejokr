@@ -2,6 +2,7 @@
 
 import { createContext, ReactNode, useState } from "react";
 import { IJoke } from "../_types/api";
+import { toast } from "sonner";
 
 interface IJokeContext {
   joke: IJoke;
@@ -36,6 +37,7 @@ export const JokeProvider = ({ children }: { children: ReactNode }) => {
       }
       const data = await response.json();
       setJoke(data);
+      toast.success("Piada carregada com sucesso");
     } catch (error) {
       console.error(error);
       setJoke({
@@ -73,10 +75,13 @@ export const JokeProvider = ({ children }: { children: ReactNode }) => {
           url: "",
           value: "Nenhuma piada encontrada",
         };
+        toast.error("Nenhum resultado encontrado");
       }
       setJoke(dataResult);
+      toast.success("Busca realizada com sucesso");
     } catch (error) {
       console.error(error);
+      toast.error("Nenhum resultado encontrado");
       setJoke({
         categories: [],
         created_at: "",
