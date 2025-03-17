@@ -6,6 +6,7 @@ import { toast } from "sonner";
 
 interface IJokeContext {
   joke: IJoke;
+  searchParams: string;
   getRandomJoke: () => Promise<void>;
   getJokeBySearch: (searchParams: string) => Promise<void>;
 }
@@ -22,12 +23,14 @@ const cleanJoke = {
 
 export const JokeContext = createContext<IJokeContext>({
   joke: cleanJoke,
+  searchParams: "",
   getRandomJoke: async () => {},
   getJokeBySearch: async () => {},
 });
 
 export const JokeProvider = ({ children }: { children: ReactNode }) => {
   const [joke, setJoke] = useState<IJoke>(cleanJoke);
+  const [searchParams, setSearchParams] = useState("");
 
   const getRandomJoke = async () => {
     try {
@@ -37,6 +40,7 @@ export const JokeProvider = ({ children }: { children: ReactNode }) => {
       }
       const data = await response.json();
       setJoke(data);
+      setSearchParams("");
       toast.success("Piada carregada com sucesso");
     } catch (error) {
       console.error(error);
@@ -78,6 +82,7 @@ export const JokeProvider = ({ children }: { children: ReactNode }) => {
         toast.error("Nenhum resultado encontrado");
       }
       setJoke(dataResult);
+      setSearchParams(searchParams);
       toast.success("Busca realizada com sucesso");
     } catch (error) {
       console.error(error);
@@ -98,6 +103,7 @@ export const JokeProvider = ({ children }: { children: ReactNode }) => {
     <JokeContext.Provider
       value={{
         joke,
+        searchParams,
         getJokeBySearch,
         getRandomJoke,
       }}

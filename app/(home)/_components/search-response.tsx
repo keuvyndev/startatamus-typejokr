@@ -10,7 +10,7 @@ import { DataTable } from "./data-table";
 import { infoColumns } from "./info-columns";
 
 const SearchResponseContent = () => {
-  const { joke } = useContext(JokeContext);
+  const { joke, searchParams } = useContext(JokeContext);
   const handleClickCopyId = () => {
     navigator.clipboard.writeText(joke.id);
     toast.success("ID copiada com sucesso.");
@@ -23,7 +23,7 @@ const SearchResponseContent = () => {
           <DataTable columns={infoColumns} data={[joke]} />
         </div>
         <div className="flex gap-4">
-          <Message message={joke.value} />
+          <Message message={joke.value} searchParams={searchParams} />
         </div>
         <div className="mt-8 flex justify-between">
           <Button onClick={handleClickCopyId}>
