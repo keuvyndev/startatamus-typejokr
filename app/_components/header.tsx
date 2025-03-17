@@ -1,7 +1,17 @@
+"use client";
+
 import Image from "next/image";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "./ui/hover-card";
+import { useState } from "react";
+import { Button } from "./ui/button";
 
 const Header = () => {
+  const [showHoverCard, setShowHoverCard] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowHoverCard(!showHoverCard);
+  };
+
   return (
     <>
       {/* Layout para Mobile */}
@@ -16,16 +26,18 @@ const Header = () => {
           />
         </div>
 
-        <div className="flex items-center justify-center gap-2 py-3">
+        <div className="flex items-center justify-center py-3">
           <HoverCard>
-            <HoverCardTrigger>
-              <Image
-                width={27}
-                height={27}
-                src={"/info-button.png"}
-                alt="More Info"
-                className="hover:brightness-105"
-              ></Image>
+            <HoverCardTrigger asChild>
+              <Button onClick={handleButtonClick} className="px-2">
+                <Image
+                  width={27}
+                  height={27}
+                  src={"/info-button.png"}
+                  alt="More Info"
+                  className="hover:brightness-105"
+                ></Image>
+              </Button>
             </HoverCardTrigger>
             <HoverCardContent>
               Use o campo de busca para encontrar uma piada ou clique no botão
